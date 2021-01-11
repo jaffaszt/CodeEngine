@@ -11,8 +11,8 @@ export PROJECT_NAME=$(ibmcloud ce project current | \
 export PROJECT_ID=$(ibmcloud ce project get --name ${PROJECT_NAME} | \
   awk '/^ID/{ print $2 }')
 export POLICY_ID=""
-export BUCKET=${PROJECT_NAME}-${PROJECT_ID}
-
+#export BUCKET=${PROJECT_NAME}-${PROJECT_ID}
+export BUCKET=demos-jaffas
 # Clean up previous run
 function clean() {
   set +ex
